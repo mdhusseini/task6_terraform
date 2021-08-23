@@ -3,7 +3,7 @@
 This project assumes the following
 
  1. You are using ubuntu machine  	
- 2.  You have the following packages installed
+ 2. You have the following packages installed
 	 - git
 	 - terraform
 	 - aws cli
@@ -13,6 +13,7 @@ This project assumes the following
 ## Rationale
 I have chosen to execute the python/go scripts in an app server hosted in ec2. Its a simple way to run the programs without complicating the scripts.
 I have chosen to place the python/go scripts in their own repositories and clone it via remote-exec so that the codes are decoupled from the infra scripts.
+I have chosen to allow terraform to generate the private keys dynamically instead of assigning a fixed private key because in this context, we do not need to maintain a fixed key. In an actual environment, in most cases this is not applicable.
 
 ## Instructions to execute the terraform script
 Please execute the following steps to access the programs
