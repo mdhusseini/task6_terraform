@@ -8,9 +8,13 @@ This project assumes the following
 	 - terraform
 	 - aws cli
 	 - ssh 	
-   3. you have aws credentials configured
+ 3. you have aws credentials configured
 
-## Provisioning the terraform resources
+## Rationale
+I have chosen to execute the python/go scripts in an app server hosted in ec2. Its a simple way to run the programs without complicating the scripts.
+I have chosen to place the python/go scripts in their own repositories and clone it via remote-exec so that the codes are decoupled from the infra scripts.
+
+## Instructions to execute the terraform script
 Please execute the following steps to access the programs
 
  1. login to your ubuntu machine
